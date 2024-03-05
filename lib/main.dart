@@ -1,110 +1,210 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:tacoloco/components/button.dart';
+import 'package:tacoloco/components/foodTile.dart';
+import 'package:tacoloco/models/food.dart';
+import 'package:tacoloco/themes/colors.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
+class MenuPage extends StatefulWidget {
+  const MenuPage({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MenuPage> createState() => _MenuPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class _MenuPageState extends State<MenuPage> {
+  // food menu
+  List<Food> foodMenu = [
+    //item 1
+    Food(name: 'Bacon, Egg, and Cheese\nBreakfast Taco', price: '45', imagePath: 'lib/images/Bacon, Egg, and ChEEse BrEakfast Taco.png', rating: '4.7'),
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+    //item 2
+    Food(name: 'Bacon, Egg, and Cheese\nBreakfast Burrito', price: '45', imagePath: 'lib/images/Bacon, Egg, and Cheese Breakfast Burrito.png', rating: '4.7'),
+
+    //item 3
+    Food(name: 'Bacon, Potato, Egg and Cheese\nBreakfast Taco', price: '45', imagePath: 'lib/images/BACON, POTATO, EGG & CHEESE BREAKFAST TACO.png', rating: '4.7'),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+        backgroundColor: bgColor,
+        leading: Icon(
+          Icons.menu,
+          color: primaryColor,
+        ),
+        title: Text(
+          'Menu',
+          style: TextStyle(color: primaryColor),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      body: ListView(
+        children: [
+          //promo banner
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('lib/images/menuB.jpeg'),
+                fit: BoxFit.cover,
+              ),
+              borderRadius: BorderRadius.circular(16),
+            ),
+            margin: const EdgeInsets.symmetric(vertical: 25, horizontal: 25),
+            padding: const EdgeInsets.only(left:16, top: 25, bottom: 25,),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                //promo message
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Free Delivery on\nAll Orders',
+                      style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 20),
+                    ),
+                    const SizedBox(height: 20),
+                    //redeem button
+                    Button(
+                      text: 'Redeem',
+                      ontap: () {},
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 10,),
+          //search bar
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: TextField(
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: primaryColor,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: primaryColor,
+                  ),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                prefixIcon: Icon(
+                  Icons.search,
+                  color: primaryColor.withOpacity(0.4),
+                ),
+                hintText: 'Search here',
+                hintStyle: TextStyle(
+                  color: primaryColor.withOpacity(0.4),
+                ),
+                contentPadding: EdgeInsets.symmetric(vertical: 8),
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 25,),
+          //menu items
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: RichText(
+              text: TextSpan(
+                style: const TextStyle(
+                  fontSize: 18,
+                ),
+                children: [
+                  TextSpan(
+                    text: 'Food',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor,
+                    ),
+                  ),
+                  const TextSpan(
+                    text: ' Menu',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 10,),
+
+          Container(
+            height: 250,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: foodMenu.length,
+              itemBuilder: (context, index) => FoodTile(
+                food: foodMenu[index], onTap: () {  },
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 25,),
+          //popular items
+
+          Container(
+            decoration: BoxDecoration(
+              color: primaryColor.withAlpha((primaryColor.alpha * 0.9).round()),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            margin: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
+            padding: const EdgeInsets.all(20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    //image
+                    Image.asset(
+                      'lib/images/taco-truck.png',
+                      height: 60,
+                    ),
+
+                    const SizedBox(width: 20,),
+                    //name + price
+                    Column(
+                      children: [
+                        //name
+                        Text(
+                          'name',
+                          style: GoogleFonts.aBeeZee(fontSize: 18, color: Colors.white),
+                        ),
+
+                        const SizedBox(height: 10,),
+                        //price
+                        const Text(
+                          '\$29.00',
+                          style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+
+                //heart
+                const Icon(
+                  Icons.favorite_outline,
+                  color: Colors.white,
+                  size: 28,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
