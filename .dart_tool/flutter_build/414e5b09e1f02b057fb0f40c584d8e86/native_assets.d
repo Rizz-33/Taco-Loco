@@ -1,0 +1,1 @@
+ C:\\@Rizz-33\\Taco-Loco\\.dart_tool\\flutter_build\\414e5b09e1f02b057fb0f40c584d8e86\\native_assets.yaml: 

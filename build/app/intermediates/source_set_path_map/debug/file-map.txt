@@ -1,0 +1,13 @@
+com.example.tacoloco.app-debug-0 C:\@Rizz-33\Taco-Loco\android\app\src\debug\res
+com.example.tacoloco.app-main-1 C:\@Rizz-33\Taco-Loco\android\app\src\main\res
+com.example.tacoloco.app-pngs-2 C:\@Rizz-33\Taco-Loco\build\app\generated\res\pngs\debug
+com.example.tacoloco.app-resValues-3 C:\@Rizz-33\Taco-Loco\build\app\generated\res\resValues\debug
+com.example.tacoloco.app-rs-4 C:\@Rizz-33\Taco-Loco\build\app\generated\res\rs\debug
+com.example.tacoloco.app-mergeDebugResources-5 C:\@Rizz-33\Taco-Loco\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.tacoloco.app-mergeDebugResources-6 C:\@Rizz-33\Taco-Loco\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.tacoloco.app-merged_res-7 C:\@Rizz-33\Taco-Loco\build\app\intermediates\merged_res\debug
+com.example.tacoloco.app-packaged_res-8 C:\@Rizz-33\Taco-Loco\build\path_provider_android\intermediates\packaged_res\debug
+com.example.tacoloco.app-jetified-annotation-experimental-1.1.0-9 C:\Users\HP\.gradle\caches\transforms-3\09db32a73384ac2dccccf916d7dc0262\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.tacoloco.app-core-1.6.0-10 C:\Users\HP\.gradle\caches\transforms-3\168e459aae59caaab0d2c703cf9d67ab\transformed\core-1.6.0\res
+com.example.tacoloco.app-jetified-window-1.0.0-beta04-11 C:\Users\HP\.gradle\caches\transforms-3\29fe38a5fd6c3bf46cd8e59c2b63489e\transformed\jetified-window-1.0.0-beta04\res
+com.example.tacoloco.app-jetified-window-java-1.0.0-beta04-12 C:\Users\HP\.gradle\caches\transforms-3\978180320ed1d29d66a82edc9d24751e\transformed\jetified-window-java-1.0.0-beta04\res
