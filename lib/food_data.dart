@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tacoloco/models/food.dart';
 
 class FoodData extends StatefulWidget {
-  const FoodData(int index, {super.key});
+  final Food food;
+  const FoodData(int index, {super.key, required this.food});
 
   @override
   State<FoodData> createState() => _FoodDataState();
