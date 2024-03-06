@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FoodData extends StatefulWidget {
-  const FoodData({super.key});
+  const FoodData(int index, {super.key});
 
   @override
   State<FoodData> createState() => _FoodDataState();
