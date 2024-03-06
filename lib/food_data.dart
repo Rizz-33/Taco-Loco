@@ -10,6 +10,6 @@ class FoodData extends StatefulWidget {
 class _FoodDataState extends State<FoodData> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold();
   }
 }
