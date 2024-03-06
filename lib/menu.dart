@@ -26,8 +26,8 @@ class _MenuPageState extends State<MenuPage> {
     Food(name: 'Bacon, Potato, Egg and\nCheese Breakfast Taco', price: '45', imagePath: 'lib/images/BACON, POTATO, EGG & CHEESE BREAKFAST TACO.png', rating: '4.7'),
   ];
 
-  void NavigateToFoodData(int index){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => FoodData(index)));
+  void NavigateToFoodData(int index,){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => FoodData(food: foodMenu[index])));
   }
 
   @override
@@ -152,7 +152,7 @@ class _MenuPageState extends State<MenuPage> {
               scrollDirection: Axis.horizontal,
               itemCount: foodMenu.length,
               itemBuilder: (context, index) => FoodTile(
-                food: foodMenu[index], onTap: () => FoodData(index),
+                food: foodMenu[index], onTap: () => NavigateToFoodData(index),
               ),
             ),
           ),
