@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tacoloco/components/button.dart';
 import 'package:tacoloco/components/foodTile.dart';
+import 'package:tacoloco/food_data.dart';
 import 'package:tacoloco/models/food.dart';
 import 'package:tacoloco/themes/colors.dart';
 
@@ -24,6 +25,10 @@ class _MenuPageState extends State<MenuPage> {
     //item 3
     Food(name: 'Bacon, Potato, Egg and\nCheese Breakfast Taco', price: '45', imagePath: 'lib/images/BACON, POTATO, EGG & CHEESE BREAKFAST TACO.png', rating: '4.7'),
   ];
+
+  void NavigateToFoodData(int index){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => FoodData()));
+  }
 
   @override
   Widget build(BuildContext context) {
