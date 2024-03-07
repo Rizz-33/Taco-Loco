@@ -7,14 +7,12 @@ class FoodTile extends StatelessWidget {
   final Food food;
   final void Function()? onTap;
 
-  const FoodTile({super.key, required this.food, required this.onTap});
+  const FoodTile({Key? key, required this.food, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        // Add your onTap logic here
-      },
+      onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
           color: primaryColor.withAlpha((primaryColor.alpha * 0.09).round()),
