@@ -114,13 +114,20 @@ class _FoodDataState extends State<FoodData> {
                     children: [
                       //minus button
                       Container(
+                        decoration: BoxDecoration(color: Color.fromARGB(255, 228, 84, 84), shape: BoxShape.circle),
                         child: IconButton(icon: Icon(Icons.remove, color: Colors.white,),
                         onPressed: decrementQuantity,),
                       ),
 
                       //quantity count
+                      Text(quantityCount.toString(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),),
 
                       //plus button
+                      Container(
+                        decoration: BoxDecoration(color: Color.fromARGB(255, 228, 84, 84), shape: BoxShape.circle),
+                        child: IconButton(icon: Icon(Icons.add, color: Colors.white,),
+                        onPressed: incrementQuantity,),
+                      ),
                     ],
                   )
 
