@@ -22,37 +22,40 @@ class _FoodDataState extends State<FoodData> {
       body: Column(
         children: [
           //list view
-          Expanded(child: ListView(
-            children: [
-              //image
-              Image.asset(widget.food.imagePath,
-              height: 200,),
-
-              const SizedBox(height: 20,),
-
-              //rating
-              Row(
-                children: [
-                  //star
-                  Icon(Icons.star,color: Colors.amber,),
-
-                  const SizedBox(height: 10,),
-
-                  //rating number
-                  Text(widget.food.rating,
-                  style: TextStyle(
-                    color: Colors.grey[600],
-                    fontWeight: FontWeight.bold,
-                  ),)
-
-                ],
-              )
-
-              //food name
-
-
-              //description
-            ],
+          Expanded(child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: ListView(
+              children: [
+                //image
+                Image.asset(widget.food.imagePath,
+                height: 200,),
+            
+                const SizedBox(height: 20,),
+            
+                //rating
+                Row(
+                  children: [
+                    //star
+                    Icon(Icons.star,color: Colors.amber,),
+            
+                    const SizedBox(width: 10,),
+            
+                    //rating number
+                    Text(widget.food.rating,
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontWeight: FontWeight.bold,
+                    ),)
+            
+                  ],
+                ),
+            
+                //food name
+            
+            
+                //description
+              ],
+            ),
           ))
 
 
