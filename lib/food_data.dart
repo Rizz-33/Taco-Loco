@@ -55,10 +55,21 @@ class _FoodDataState extends State<FoodData> {
             
                 //food name
                 Text(widget.food.name,
-                style: GoogleFonts.aBeeZee(fontSize: 24))
-            
+                style: GoogleFonts.aBeeZee(fontSize: 24)),
+
+                const SizedBox(height: 25,),
             
                 //description
+                Text("Description",
+                style: TextStyle(
+                  color: Colors.grey[900],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),),
+
+                const SizedBox(height: 10,),
+
+                Text("Tacos, a beloved staple of Mexican cuisine, are crafted from a folded or rolled tortilla generously filled with an array of savory ingredients like seasoned meats, beans, cheese, fresh vegetables, and zesty sauces, offering a flavorful culinary experience."),
               ],
             ),
           ))
