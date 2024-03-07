@@ -9,18 +9,18 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 255, 242, 242),
+      backgroundColor: const Color.fromARGB(255, 255, 242, 242),
       body: Padding(
-        padding: EdgeInsets.all(25.0),
+        padding: const EdgeInsets.all(25.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 25),
+            const SizedBox(height: 25),
 
             // icon
             Padding(
-              padding: EdgeInsets.all(50.0),
+              padding: const EdgeInsets.all(50.0),
               child: Image.asset('lib/images/taco-truck.png', width: 100),
             ),
 
@@ -45,7 +45,7 @@ class IntroPage extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 65),
+            const SizedBox(height: 65),
 
             // button
             Button(
