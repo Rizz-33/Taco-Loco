@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tacoloco/models/food.dart';
+import 'package:tacoloco/themes/colors.dart';
 
 class FoodData extends StatefulWidget {
   final Food food;
@@ -16,6 +17,7 @@ class _FoodDataState extends State<FoodData> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        foregroundColor: primaryColor,
       )
       
     );
