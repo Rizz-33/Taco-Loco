@@ -18,8 +18,29 @@ class _FoodDataState extends State<FoodData> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         foregroundColor: primaryColor,
-      )
-      
+      ),
+      body: Column(
+        children: [
+          //list view
+          Expanded(child: ListView(
+            children: [
+              //image
+
+
+              //rating
+
+
+              //food name
+
+
+              //description
+            ],
+          ))
+
+
+          //price + qiantity _ add to cart
+        ],
+      ),
     );
   }
 }
