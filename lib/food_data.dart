@@ -120,7 +120,7 @@ class _FoodDataState extends State<FoodData> {
                       ),
 
                       //quantity count
-                      Text(quantityCount.toString(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),),
+                      SizedBox(width: 40, child: Center(child: Text(quantityCount.toString(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),))),
 
                       //plus button
                       Container(
