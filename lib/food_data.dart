@@ -12,6 +12,23 @@ class FoodData extends StatefulWidget {
 }
 
 class _FoodDataState extends State<FoodData> {
+  //quantity
+  int quantityCount = 0;
+
+  //decrement quantity
+  void decrementQuantity(){
+    setState(() {
+      quantityCount--;
+    });
+  }
+
+  //increment quantity
+  void incrementQuantity(){
+    setState(() {
+      quantityCount++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,6 +113,10 @@ class _FoodDataState extends State<FoodData> {
                   Row(
                     children: [
                       //minus button
+                      Container(
+                        child: IconButton(icon: Icon(Icons.remove, color: Colors.white,),
+                        onPressed: decrementQuantity,),
+                      ),
 
                       //quantity count
 
