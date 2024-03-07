@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:tacoloco/components/button.dart';
 import 'package:tacoloco/models/food.dart';
+import 'package:tacoloco/models/shop.dart';
 import 'package:tacoloco/themes/colors.dart';
 
 class FoodData extends StatefulWidget {
@@ -34,7 +36,19 @@ class _FoodDataState extends State<FoodData> {
 
   //add to cart
   void addtocart(){
+    //only add to cart if there is something in the cart
+    if (quantityCount>0){
+      //get access to shop
+      final shop = context.read<Shop>();
 
+      //add to cart
+      shop.addtocart(widget.food, quantityCount);
+
+      //successful message
+      showDialog(context: context, builder: (context) => AlertDialog(
+        content: Text("Successfully added to the cart."),
+      ),);
+    }
   }
 
   @override
