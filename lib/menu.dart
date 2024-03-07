@@ -168,11 +168,10 @@ class _MenuPageState extends State<MenuPage> {
                       children: [
                         Text(
                           foodMenu[0].name, // Replace with actual food item name
-                          style: GoogleFonts.aBeeZee(fontSize: 18, color: Colors.white),
+                          style: GoogleFonts.aBeeZee(fontSize: 14, color: Colors.white),
                         ),
                         const SizedBox(height: 10,),
-                        const Text(
-                          '\$29.00',
+                        const Text('\$29.00',
                           style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ],
