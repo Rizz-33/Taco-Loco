@@ -14,7 +14,8 @@ class _FoodDataState extends State<FoodData> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 255, 158, 158),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
       )
       
     );
