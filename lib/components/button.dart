@@ -25,23 +25,23 @@ class Button extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(10),
         ),
-        padding: EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(15.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //text
             Text(
               text,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 20,
               ),
             ),
 
-            SizedBox(width: 20,),
+            const SizedBox(width: 20,),
 
             //icon
-            Icon(Icons.arrow_forward_ios, color: Colors.white, size: 20,)
+            const Icon(Icons.arrow_forward_ios, color: Colors.white, size: 20,)
           ],
         ),
       ),
