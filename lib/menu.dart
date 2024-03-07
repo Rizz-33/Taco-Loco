@@ -43,6 +43,12 @@ class _MenuPageState extends State<MenuPage> {
           'Menu',
           style: TextStyle(color: primaryColor),
         ),
+        actions: [
+          //cart button
+          IconButton(onPressed: (){
+
+          }, icon: Icon(Icons.shopping_cart))
+        ],
       ),
       body: ListView(
         children: [
