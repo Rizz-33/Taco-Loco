@@ -50,7 +50,7 @@ class _MenuPageState extends State<MenuPage> {
           //promo banner
           Container(
             decoration: BoxDecoration(
-              image: DecorationImage(
+              image: const DecorationImage(
                 image: AssetImage('lib/images/menuB.jpeg'),
                 fit: BoxFit.cover,
               ),
@@ -109,7 +109,7 @@ class _MenuPageState extends State<MenuPage> {
                 hintStyle: TextStyle(
                   color: primaryColor.withOpacity(0.4),
                 ),
-                contentPadding: EdgeInsets.symmetric(vertical: 8),
+                contentPadding: const EdgeInsets.symmetric(vertical: 8),
               ),
             ),
           ),
@@ -148,7 +148,7 @@ class _MenuPageState extends State<MenuPage> {
           Container(
             height: 250,
             child: ListView.builder(
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: foodMenu.length,
               itemBuilder: (context, index) => FoodTile(
