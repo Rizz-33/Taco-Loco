@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tacoloco/components/button.dart';
 import 'package:tacoloco/models/food.dart';
 import 'package:tacoloco/themes/colors.dart';
 
@@ -27,6 +28,11 @@ class _FoodDataState extends State<FoodData> {
     setState(() {
       quantityCount++;
     });
+  }
+
+  //add to cart
+  void addtocart(){
+
   }
 
   @override
@@ -95,7 +101,7 @@ class _FoodDataState extends State<FoodData> {
 
           //price + qiantity _ add to cart
           Container(
-            color: primaryColor,
+            color: Color.fromARGB(255, 221, 64, 64),
             padding: const EdgeInsets.all(25),
             child: Column(
               children: [
@@ -116,7 +122,7 @@ class _FoodDataState extends State<FoodData> {
                     children: [
                       //minus button
                       Container(
-                        decoration: BoxDecoration(color: Color.fromARGB(255, 228, 84, 84), shape: BoxShape.circle),
+                        decoration: BoxDecoration(color: primaryColor, shape: BoxShape.circle),
                         child: IconButton(icon: Icon(Icons.remove, color: Colors.white,),
                         onPressed: decrementQuantity,),
                       ),
@@ -126,7 +132,7 @@ class _FoodDataState extends State<FoodData> {
 
                       //plus button
                       Container(
-                        decoration: BoxDecoration(color: Color.fromARGB(255, 228, 84, 84), shape: BoxShape.circle),
+                        decoration: BoxDecoration(color: primaryColor, shape: BoxShape.circle),
                         child: IconButton(icon: Icon(Icons.add, color: Colors.white,),
                         onPressed: incrementQuantity,),
                       ),
@@ -134,7 +140,11 @@ class _FoodDataState extends State<FoodData> {
                   )
 
 
-                ],)
+                ],),
+                const SizedBox(height: 25,),
+
+                //add to cart button
+                Button(text: 'Add To Cart', ontap: addtocart)
               ],
             ),
           )
