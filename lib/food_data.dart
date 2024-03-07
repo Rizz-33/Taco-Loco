@@ -25,7 +25,8 @@ class _FoodDataState extends State<FoodData> {
           Expanded(child: ListView(
             children: [
               //image
-
+              Image.asset(widget.food.imagePath,
+              height: 200,)
 
               //rating
 
