@@ -1,8 +1,9 @@
 
 
+import 'package:flutter/material.dart';
 import 'package:tacoloco/models/food.dart';
 
-class Shop {
+class Shop extends ChangeNotifier{
 
   List<Food> _foodMenu = [
     //item 1
