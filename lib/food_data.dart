@@ -69,7 +69,8 @@ class _FoodDataState extends State<FoodData> {
 
                 const SizedBox(height: 10,),
 
-                Text("Tacos, a beloved staple of Mexican cuisine, are crafted from a folded or rolled tortilla generously filled with an array of savory ingredients like seasoned meats, beans, cheese, fresh vegetables, and zesty sauces, offering a flavorful culinary experience."),
+                Text("Tacos, a beloved staple of Mexican cuisine, are crafted from a folded or rolled tortilla generously filled with an array of savory ingredients like seasoned meats, beans, cheese, fresh vegetables, and zesty sauces, offering a flavorful culinary experience.",
+                style: TextStyle(color: Colors.grey[600], fontSize: 14, height: 2),),
               ],
             ),
           ))
