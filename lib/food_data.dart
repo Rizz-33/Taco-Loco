@@ -19,7 +19,9 @@ class _FoodDataState extends State<FoodData> {
   //decrement quantity
   void decrementQuantity(){
     setState(() {
-      quantityCount--;
+      if (quantityCount>0) {
+  quantityCount--;
+}
     });
   }
 
