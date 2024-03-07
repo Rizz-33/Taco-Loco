@@ -47,6 +47,15 @@ class _FoodDataState extends State<FoodData> {
       //successful message
       showDialog(context: context, builder: (context) => AlertDialog(
         content: Text("Successfully added to the cart."),
+        actions: [
+          IconButton(onPressed: (){
+
+            //pop once to remove dialog box
+            Navigator.pop(context);
+
+            //pop again to got previous screen
+          }, icon: Icon(Icons.done))
+        ],
       ),);
     }
   }
