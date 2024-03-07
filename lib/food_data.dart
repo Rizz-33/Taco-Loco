@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tacoloco/models/food.dart';
 import 'package:tacoloco/themes/colors.dart';
 
@@ -49,8 +50,12 @@ class _FoodDataState extends State<FoodData> {
             
                   ],
                 ),
+
+                const SizedBox(height: 10,),
             
                 //food name
+                Text(widget.food.name,
+                style: GoogleFonts.aBeeZee(fontSize: 24))
             
             
                 //description
