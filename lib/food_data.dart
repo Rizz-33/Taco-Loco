@@ -12,6 +12,11 @@ class FoodData extends StatefulWidget {
 class _FoodDataState extends State<FoodData> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 255, 158, 158),
+      )
+      
+    );
   }
 }

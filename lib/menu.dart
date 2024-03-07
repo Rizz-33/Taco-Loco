@@ -26,7 +26,7 @@ class _MenuPageState extends State<MenuPage> {
     Food(name: 'Bacon, Potato, Egg and\nCheese Breakfast Taco', price: '45', imagePath: 'lib/images/BACON, POTATO, EGG & CHEESE BREAKFAST TACO.png', rating: '4.7'),
   ];
 
-  void NavigateToFoodData(int index,){
+  void NavigateToFoodData(int index, BuildContext context) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => FoodData(food: foodMenu[index])));
   }
 
@@ -73,12 +73,11 @@ class _MenuPageState extends State<MenuPage> {
                     //redeem button
                     Button(
                       text: 'Redeem',
-                      ontap: () {},
+                      ontap: () {  },
                     ),
                   ],
                 ),
                 const SizedBox(height: 20),
-
               ],
             ),
           ),
@@ -149,10 +148,11 @@ class _MenuPageState extends State<MenuPage> {
           Container(
             height: 250,
             child: ListView.builder(
+              physics: NeverScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: foodMenu.length,
               itemBuilder: (context, index) => FoodTile(
-                food: foodMenu[index], onTap: () => NavigateToFoodData(index),
+                food: foodMenu[index], onTap: () => NavigateToFoodData(index, context),
               ),
             ),
           ),
@@ -184,7 +184,7 @@ class _MenuPageState extends State<MenuPage> {
                       children: [
                         //name
                         Text(
-                          'name',
+                          foodMenu[0].name, // Replace with actual food item name
                           style: GoogleFonts.aBeeZee(fontSize: 18, color: Colors.white),
                         ),
 
