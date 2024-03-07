@@ -1,9 +1,12 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:tacoloco/components/button.dart';
 import 'package:tacoloco/components/foodTile.dart';
 import 'package:tacoloco/food_data.dart';
-import 'package:tacoloco/models/food.dart';
+import 'package:tacoloco/models/shop.dart';
 import 'package:tacoloco/themes/colors.dart';
 
 class MenuPage extends StatefulWidget {
@@ -14,24 +17,22 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
-  // food menu
-  List<Food> foodMenu = [
-    //item 1
-    Food(name: 'Bacon, Egg, and Cheese\nBreakfast Taco', price: '45', imagePath: 'lib/images/Bacon, Egg, and ChEEse BrEakfast Taco.png', rating: '4.7'),
-
-    //item 2
-    Food(name: 'Bacon, Egg, and Cheese\nBreakfast Burrito', price: '45', imagePath: 'lib/images/Bacon, Egg, and Cheese Breakfast Burrito.png', rating: '4.7'),
-
-    //item 3
-    Food(name: 'Bacon, Potato, Egg and\nCheese Breakfast Taco', price: '45', imagePath: 'lib/images/BACON, POTATO, EGG & CHEESE BREAKFAST TACO.png', rating: '4.7'),
-  ];
+  
 
   void NavigateToFoodData(int index) {
+    //menu from shop
+    final shop = context.read<Shop>();
+    final foodMenu = shop.foodMenu;
+
     Navigator.push(context, MaterialPageRoute(builder: (context) => FoodData(food: foodMenu[index])));
   }
-
+  
   @override
   Widget build(BuildContext context) {
+
+    final shop = context.read<Shop>();
+    final foodMenu = shop.foodMenu;
+
     return Scaffold(
       backgroundColor: bgColor,
       appBar: AppBar(
