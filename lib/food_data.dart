@@ -62,7 +62,7 @@ class _FoodDataState extends State<FoodData> {
                 Row(
                   children: [
                     //star
-                    Icon(Icons.star,color: Colors.amber,),
+                    const Icon(Icons.star,color: Colors.amber,),
             
                     const SizedBox(width: 10,),
             
@@ -103,7 +103,7 @@ class _FoodDataState extends State<FoodData> {
 
           //price + qiantity _ add to cart
           Container(
-            color: Color.fromARGB(255, 221, 64, 64),
+            color: const Color.fromARGB(255, 221, 64, 64),
             padding: const EdgeInsets.all(25),
             child: Column(
               children: [
@@ -113,7 +113,7 @@ class _FoodDataState extends State<FoodData> {
                   children: [
                   //price
                   Text("\$" + widget.food.price,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -125,17 +125,17 @@ class _FoodDataState extends State<FoodData> {
                       //minus button
                       Container(
                         decoration: BoxDecoration(color: primaryColor, shape: BoxShape.circle),
-                        child: IconButton(icon: Icon(Icons.remove, color: Colors.white,),
+                        child: IconButton(icon: const Icon(Icons.remove, color: Colors.white,),
                         onPressed: decrementQuantity,),
                       ),
 
                       //quantity count
-                      SizedBox(width: 40, child: Center(child: Text(quantityCount.toString(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),))),
+                      SizedBox(width: 40, child: Center(child: Text(quantityCount.toString(), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),))),
 
                       //plus button
                       Container(
                         decoration: BoxDecoration(color: primaryColor, shape: BoxShape.circle),
-                        child: IconButton(icon: Icon(Icons.add, color: Colors.white,),
+                        child: IconButton(icon: const Icon(Icons.add, color: Colors.white,),
                         onPressed: incrementQuantity,),
                       ),
                     ],
