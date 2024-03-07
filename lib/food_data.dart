@@ -100,7 +100,9 @@ class _FoodDataState extends State<FoodData> {
             child: Column(
               children: [
                 // price + quantity
-                Row(children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
                   //price
                   Text("\$" + widget.food.price,
                   style: TextStyle(
