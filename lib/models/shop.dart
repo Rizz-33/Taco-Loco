@@ -31,5 +31,8 @@ class Shop {
 
 
   //remove from cart
+  void removefromcart(Food food) {
+    _cart.remove(food);
+  }
 
 }
