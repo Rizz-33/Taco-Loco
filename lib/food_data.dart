@@ -59,7 +59,7 @@ class _FoodDataState extends State<FoodData> {
               //pop again to got previous screen
               Navigator.pop(context);
             },
-            icon: Icon(Icons.done))
+            icon: Icon(Icons.done, color: Colors.white,))
           ],
       ),);
     }
