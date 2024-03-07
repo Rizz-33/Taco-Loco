@@ -148,7 +148,6 @@ class _MenuPageState extends State<MenuPage> {
           Container(
             height: 250,
             child: ListView.builder(
-              physics: const NeverScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: foodMenu.length,
               itemBuilder: (context, index) => FoodTile(
