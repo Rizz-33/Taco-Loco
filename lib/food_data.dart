@@ -26,10 +26,27 @@ class _FoodDataState extends State<FoodData> {
             children: [
               //image
               Image.asset(widget.food.imagePath,
-              height: 200,)
+              height: 200,),
+
+              const SizedBox(height: 20,),
 
               //rating
+              Row(
+                children: [
+                  //star
+                  Icon(Icons.star,color: Colors.amber,),
 
+                  const SizedBox(height: 10,),
+
+                  //rating number
+                  Text(widget.food.rating,
+                  style: TextStyle(
+                    color: Colors.grey[600],
+                    fontWeight: FontWeight.bold,
+                  ),)
+
+                ],
+              )
 
               //food name
 
