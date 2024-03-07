@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -17,19 +15,19 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
-  
-
   void NavigateToFoodData(int index) {
-    //menu from shop
     final shop = context.read<Shop>();
     final foodMenu = shop.foodMenu;
-
-    Navigator.push(context, MaterialPageRoute(builder: (context) => FoodData(food: foodMenu[index])));
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => FoodData(
+                  food: foodMenu[index],
+                )));
   }
-  
+
   @override
   Widget build(BuildContext context) {
-
     final shop = context.read<Shop>();
     final foodMenu = shop.foodMenu;
 
@@ -48,7 +46,6 @@ class _MenuPageState extends State<MenuPage> {
       ),
       body: ListView(
         children: [
-          //promo banner
           Container(
             decoration: BoxDecoration(
               image: const DecorationImage(
@@ -58,11 +55,10 @@ class _MenuPageState extends State<MenuPage> {
               borderRadius: BorderRadius.circular(16),
             ),
             margin: const EdgeInsets.symmetric(vertical: 25, horizontal: 25),
-            padding: const EdgeInsets.only(left:16, top: 25, bottom: 25,),
+            padding: const EdgeInsets.only(left: 16, top: 25, bottom: 25),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                //promo message
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -71,10 +67,9 @@ class _MenuPageState extends State<MenuPage> {
                       style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 20),
                     ),
                     const SizedBox(height: 20),
-                    //redeem button
                     Button(
                       text: 'Redeem',
-                      ontap: () {  },
+                      ontap: () {},
                     ),
                   ],
                 ),
@@ -82,9 +77,7 @@ class _MenuPageState extends State<MenuPage> {
               ],
             ),
           ),
-
           const SizedBox(height: 10,),
-          //search bar
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: TextField(
@@ -114,9 +107,7 @@ class _MenuPageState extends State<MenuPage> {
               ),
             ),
           ),
-
           const SizedBox(height: 25,),
-          //menu items
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: RichText(
@@ -143,23 +134,19 @@ class _MenuPageState extends State<MenuPage> {
               ),
             ),
           ),
-
           const SizedBox(height: 10,),
-
           Container(
             height: 250,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: foodMenu.length,
               itemBuilder: (context, index) => FoodTile(
-                food: foodMenu[index], onTap: () => NavigateToFoodData(index),
+                food: foodMenu[index],
+                onTap: () => NavigateToFoodData(index),
               ),
             ),
           ),
-
           const SizedBox(height: 25,),
-          //popular items
-
           Container(
             decoration: BoxDecoration(
               color: primaryColor.withAlpha((primaryColor.alpha * 0.9).round()),
@@ -172,24 +159,18 @@ class _MenuPageState extends State<MenuPage> {
               children: [
                 Row(
                   children: [
-                    //image
                     Image.asset(
                       'lib/images/taco-truck.png',
                       height: 60,
                     ),
-
                     const SizedBox(width: 20,),
-                    //name + price
                     Column(
                       children: [
-                        //name
                         Text(
                           foodMenu[0].name, // Replace with actual food item name
                           style: GoogleFonts.aBeeZee(fontSize: 18, color: Colors.white),
                         ),
-
                         const SizedBox(height: 10,),
-                        //price
                         const Text(
                           '\$29.00',
                           style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
@@ -198,8 +179,6 @@ class _MenuPageState extends State<MenuPage> {
                     ),
                   ],
                 ),
-
-                //heart
                 const Icon(
                   Icons.favorite_outline,
                   color: Colors.white,
