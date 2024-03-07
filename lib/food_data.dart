@@ -73,10 +73,41 @@ class _FoodDataState extends State<FoodData> {
                 style: TextStyle(color: Colors.grey[600], fontSize: 14, height: 2),),
               ],
             ),
-          ))
+          ),),
 
 
           //price + qiantity _ add to cart
+          Container(
+            color: primaryColor,
+            padding: const EdgeInsets.all(25),
+            child: Column(
+              children: [
+                // price + quantity
+                Row(children: [
+                  //price
+                  Text("\$" + widget.food.price,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),),
+
+                  //quantity
+                  Row(
+                    children: [
+                      //minus button
+
+                      //quantity count
+
+                      //plus button
+                    ],
+                  )
+
+
+                ],)
+              ],
+            ),
+          )
         ],
       ),
     );
