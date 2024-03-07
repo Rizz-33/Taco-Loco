@@ -45,17 +45,22 @@ class _FoodDataState extends State<FoodData> {
       shop.addtocart(widget.food, quantityCount);
 
       //successful message
-      showDialog(context: context, builder: (context) => AlertDialog(
-        content: Text("Successfully added to the cart."),
-        actions: [
-          IconButton(onPressed: (){
+      showDialog(context: context,
+        barrierDismissible: false,
+        builder: (context) => AlertDialog(
+          backgroundColor: primaryColor,
+          content: Text("Successfully added to the cart.", style: TextStyle(color: Colors.white),textAlign: TextAlign.center,),
+          actions: [
+            IconButton(onPressed: (){
 
-            //pop once to remove dialog box
-            Navigator.pop(context);
+              //pop once to remove dialog box
+              Navigator.pop(context);
 
-            //pop again to got previous screen
-          }, icon: Icon(Icons.done))
-        ],
+              //pop again to got previous screen
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.done))
+          ],
       ),);
     }
   }
