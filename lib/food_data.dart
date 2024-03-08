@@ -30,8 +30,10 @@ class _FoodDataState extends State<FoodData> {
   //increment quantity
   void incrementQuantity(){
     setState(() {
-      quantityCount++;
-    });
+  setState(() {
+    quantityCount++;
+  });
+});
   }
 
   //add to cart
