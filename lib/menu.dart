@@ -35,13 +35,12 @@ class _MenuPageState extends State<MenuPage> {
       backgroundColor: bgColor,
       appBar: AppBar(
         backgroundColor: bgColor,
+        foregroundColor: primaryColor,
         leading: Icon(
           Icons.menu,
-          color: primaryColor,
         ),
         title: Text(
           'Menu',
-          style: TextStyle(color: primaryColor),
         ),
         actions: [
           //cart button
