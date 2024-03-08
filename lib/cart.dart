@@ -35,7 +35,8 @@ class Cart extends StatelessWidget {
 
         //retuen list tile
         return Container(
-          decoration: BoxDecoration(color: primaryColor.withAlpha((primaryColor.alpha * 0.09).round()),),
+          decoration: BoxDecoration(color: primaryColor.withAlpha((primaryColor.alpha * 0.09).round()),
+          borderRadius: BorderRadius.circular(16)),
           margin: EdgeInsets.only(left: 20, top: 20, right: 20),
           child: ListTile(
             title: Text(foodName,
