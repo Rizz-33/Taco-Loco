@@ -10,8 +10,9 @@ class Cart extends StatelessWidget {
 
 
   //remove from cart
-  void removefromcart(){
-
+  void removefromcart(Food food, BuildContext context){
+    //get access to shop
+    final shop = context.read();
   }
 
   @override
@@ -48,7 +49,8 @@ class Cart extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.bold),),
                   subtitle: Text(foodPrice,
                   style: TextStyle(color: Colors.grey[600]),),
-                  trailing: IconButton(icon: Icon(Icons.delete, color: Colors.grey[500],), onPressed: removefromcart,),
+                  trailing: IconButton(icon: Icon(Icons.delete, color: Colors.grey[500],), 
+                  onPressed: () => removefromcart(food, context),),
                 ),
               );
             }),
