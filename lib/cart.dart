@@ -7,6 +7,12 @@ import 'package:tacoloco/themes/colors.dart';
 class Cart extends StatelessWidget {
   const Cart({super.key});
 
+
+  //remove from cart
+  void removefromcart(){
+    
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<Shop>(builder: (context, value, child) => Scaffold(
@@ -31,6 +37,7 @@ class Cart extends StatelessWidget {
         return ListTile(
           title: Text(foodName),
           subtitle: Text(foodPrice),
+          trailing: IconButton(icon: Icon(Icons.delete), onPressed: removefromcart,),
         );
       }),
     ),);
