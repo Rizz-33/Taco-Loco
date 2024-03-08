@@ -55,7 +55,10 @@ class Cart extends StatelessWidget {
           ),
 
           //pay button
-          Button(text: 'Pay Now', ontap: (){})
+          Padding(
+            padding: const EdgeInsets.all(25.0),
+            child: Button(text: 'Pay Now', ontap: (){}),
+          )
         ],
       ),
     ),);
