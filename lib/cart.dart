@@ -12,6 +12,15 @@ class Cart extends StatelessWidget {
         backgroundColor: primaryColor,
         foregroundColor: Colors.white,
       ),
+      body: ListView.builder(itemBuilder: (context, index){
+        //get food from cart
+
+        //get food name
+
+        //get food price
+
+        //retuen list tile
+      }),
     );
   }
 }
