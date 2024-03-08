@@ -38,8 +38,10 @@ class Cart extends StatelessWidget {
           decoration: BoxDecoration(color: primaryColor.withAlpha((primaryColor.alpha * 0.09).round()),),
           margin: EdgeInsets.only(left: 20, top: 20, right: 20),
           child: ListTile(
-            title: Text(foodName),
-            subtitle: Text(foodPrice),
+            title: Text(foodName,
+            style: TextStyle(fontWeight: FontWeight.bold),),
+            subtitle: Text(foodPrice,
+            style: TextStyle(color: Colors.grey[600]),),
             trailing: IconButton(icon: Icon(Icons.delete), onPressed: removefromcart,),
           ),
         );
