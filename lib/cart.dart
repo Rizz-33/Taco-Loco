@@ -28,6 +28,10 @@ class Cart extends StatelessWidget {
         final String foodPrice = food.price;
 
         //retuen list tile
+        return ListTile(
+          title: Text(foodName),
+          subtitle: Text(foodPrice),
+        );
       }),
     ),);
   }
