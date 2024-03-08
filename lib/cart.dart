@@ -10,7 +10,7 @@ class Cart extends StatelessWidget {
 
   //remove from cart
   void removefromcart(){
-    
+
   }
 
   @override
@@ -34,10 +34,13 @@ class Cart extends StatelessWidget {
         final String foodPrice = food.price;
 
         //retuen list tile
-        return ListTile(
-          title: Text(foodName),
-          subtitle: Text(foodPrice),
-          trailing: IconButton(icon: Icon(Icons.delete), onPressed: removefromcart,),
+        return Container(
+          decoration: BoxDecoration(color: primaryColor.withAlpha((primaryColor.alpha * 0.09).round()),),
+          child: ListTile(
+            title: Text(foodName),
+            subtitle: Text(foodPrice),
+            trailing: IconButton(icon: Icon(Icons.delete), onPressed: removefromcart,),
+          ),
         );
       }),
     ),);
