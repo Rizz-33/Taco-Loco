@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:tacoloco/models/shop.dart';
 import 'package:tacoloco/themes/colors.dart';
 
 class Cart extends StatelessWidget {
@@ -6,7 +8,7 @@ class Cart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Consumer<Shop>(builder: (context, value, child) => Scaffold(
       appBar: AppBar(
         title: Text('My Cart'),
         backgroundColor: primaryColor,
@@ -21,6 +23,6 @@ class Cart extends StatelessWidget {
 
         //retuen list tile
       }),
-    );
+    ),);
   }
 }
