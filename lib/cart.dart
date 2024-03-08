@@ -12,7 +12,10 @@ class Cart extends StatelessWidget {
   //remove from cart
   void removefromcart(Food food, BuildContext context){
     //get access to shop
-    final shop = context.read();
+    final shop = context.read<Shop>();
+
+    //remove from cart
+    shop.removefromcart(food);
   }
 
   @override
