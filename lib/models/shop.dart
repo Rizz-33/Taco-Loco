@@ -7,10 +7,10 @@ class Shop extends ChangeNotifier{
 
   List<Food> _foodMenu = [
     //item 1
-    Food(name: 'Bacon, Egg, and Cheese\nBreakfast Taco', price: '45', imagePath: 'lib/images/Bacon, Egg, and ChEEse BrEakfast Taco.png', rating: '4.7'),
+    Food(name: 'Bacon, Egg, and Cheese\nBreakfast Taco', price: '45', imagePath: 'lib/images/Bacon, Egg, and ChEEse BrEakfast Taco.png', rating: '4.9'),
 
     //item 2
-    Food(name: 'Bacon, Egg, and Cheese\nBreakfast Burrito', price: '45', imagePath: 'lib/images/Bacon, Egg, and Cheese Breakfast Burrito.png', rating: '4.7'),
+    Food(name: 'Bacon, Egg, and Cheese\nBreakfast Burrito', price: '45', imagePath: 'lib/images/Bacon, Egg, and Cheese Breakfast Burrito.png', rating: '4.4'),
 
     //item 3
     Food(name: 'Bacon, Potato, Egg and\nCheese Breakfast Taco', price: '45', imagePath: 'lib/images/BACON, POTATO, EGG & CHEESE BREAKFAST TACO.png', rating: '4.7'),
@@ -25,7 +25,7 @@ class Shop extends ChangeNotifier{
 
   //add to cart
   void addtocart(Food foodItem, int quantity){
-    for (int i = 0; 1< quantity; i++) {
+    for (int i = 0; i< quantity; i++) {
       _cart.add(foodItem);
     }
     notifyListeners();
