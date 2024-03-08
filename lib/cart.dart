@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tacoloco/themes/colors.dart';
 
 class Cart extends StatelessWidget {
   const Cart({super.key});
@@ -8,6 +9,8 @@ class Cart extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('My Cart'),
+        backgroundColor: primaryColor,
+        foregroundColor: Colors.white,
       ),
     );
   }
